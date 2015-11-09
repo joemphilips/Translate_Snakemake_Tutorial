@@ -36,6 +36,7 @@ SnakemakeとSnakefileの目標は段階的にワークフローを作成して�
 
 ---
 
+Citationの仕方などについては[公式のHome](https://bitbucket.org/johanneskoester/snakemake/wiki/Home)を見てください。
 以下がチュートリアルです。多少意訳しています。
 
 
