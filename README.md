@@ -300,7 +300,7 @@ expand("sorted_reads/{sample}.bam", sample=SAMPLES)
 
 `expand()`関数は複数のワイルドカードを用いるときに特に有効です。例えば
 
-```sh
+```snakefile
 expand("sorted_reads/{sample}.{replicate}.bam", sample=SAMPLES, replicate=[0, 1])
 ```
 
@@ -309,6 +309,8 @@ expand("sorted_reads/{sample}.{replicate}.bam", sample=SAMPLES, replicate=[0, 1]
 ```sh
 ["sorted_reads/A.0.bam", "sorted_reads/A.1.bam", "sorted_reads/B.0.bam", "sorted_reads/B.1.bam"]
 ```
+
+(訳注: expand()内でワイルドカードを展開したくない場合は`expand(sorted_reads/{sample}.{{replicate}}.bam, sample=SAMPLES)`のように`{}`を2重にする必要があります。)
 
 詳細を知りたい方は[Documetation](https://bitbucket.org/johanneskoester/snakemake/wiki/Documentation)を参考にしてください。
 SnakefileはPythonの拡張であるため、pythonの文法ならば何でも使用することができます。そのためSnakfefileの上の方に
